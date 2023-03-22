@@ -1,0 +1,21 @@
+// footer.scss
+
+@use './var.scss' as *;
+@import './mixin.scss';
+
+footer {
+    background-color: #2e2e2e;
+    padding: 45px 0;
+    color: $white;
+    p {
+        font-size: $font-sm;
+        line-height: 1.5;
+        padding-bottom: 20px;
+        @include layoutSm{
+            font-size: $font-xs;
+        }
+    }
+    small {
+        font-size: $font-xs;
+    }
+}

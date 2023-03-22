@@ -1,0 +1,308 @@
+@use './var.scss' as *;
+@import './mixin.scss';
+
+@import './common.scss';
+@import './header.scss';
+@import './footer.scss';
+
+// contents
+/* main visual */
+.mainVisual { 
+    border-radius: 100px 0 100px 0; 
+    overflow: hidden;
+    .carousel-control-next-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    .carousel-control-prev-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    @include tablet{
+        border-radius: 50px 0 50px 0;
+    }
+}
+
+/* quick menu */
+.quick {
+    padding: 50px 0;
+    overflow: hidden;
+    li {
+        a {
+            display: block;
+            padding: 100px 0 10px;
+            background: {
+                repeat: no-repeat;
+                position: center top 10px;
+                size: auto 50%;
+            }
+            transition: all .25s;
+            span {
+                display: block;
+                color: #222;
+                @include txtAlign;
+                line-height: 1.4;
+                @include tablet{
+                    font-size: 13px;
+                }
+            }
+            @include tablet{
+                padding: 80px 0 10px;
+                background-size: auto 45%;
+            }
+        }
+        @for $i from 1 through 5 {
+            &:nth-child(#{$i}) a {
+                background-image: url('../img/icon_quick#{$i}.svg');
+            }
+        }
+        &:hover {
+            a {
+                transform: translateY(-15px);
+            }
+        }
+    }
+}
+
+/* best item */
+.bestItem {
+    background-color: $color-f1;
+    padding: 66px 0;
+    .container-lg {
+        > h3 {
+            font-size: $font-xxl;
+            font-weight: $fontB;
+            line-height: 1.7;
+            @include layoutLg{
+                @include txtAlign;
+            }
+        }
+        > p{
+            font-size: $font-lg;
+            color: $color-55;
+            @include layoutLg{
+                @include txtAlign;
+            }
+        }
+        .tab {
+            padding: 45px 0;
+            @include layout ($spaceBetween: flex-start);
+            @include layoutLg{
+                @include layout($spaceBetween: center);
+            }
+            @include tablet{
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            li {
+                margin: 0 10px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                @include tablet{
+                    margin: 0;
+                }
+                > a {
+                    display: block;
+                    padding: 0 20px;
+                    color: $black;
+                    line-height: 2.5;
+                    border-radius: 20px;
+                    background-color: #e1e1e1;
+                }
+                &.active {
+                    a {
+                        color: $white;
+                        background-color: $color-55;
+                        @include tablet{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                @include tablet{
+                    width: 49%;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .product {
+            figure {
+                background-color: $white;
+                padding: 20px 0;
+                @include txtAlign;
+                @include layoutLg{
+                    margin-bottom: 20px;
+                }
+                @include layoutSm{
+                    @include layout($alignItem: center, $spaceBetween: flex-start)
+                }
+                > img {
+                    @include layoutSm{
+                        width: 40%
+                    }
+                }
+                figcaption {
+                    padding: 20px 20px 0;
+                    @include txtAlign($align:left);
+                    @include layoutLg{
+                        @include txtAlign;
+                    }
+                    @include layoutSm{
+                        padding: 0;
+                        @include txtAlign($align: left)
+                    }
+                    dt {
+                        font-size: $font-xl;
+                        font-weight: $fontB;
+                        color: $black;
+                        @include layoutSm{
+                            font-size: 20px;
+                        }
+                    }
+                    dd {
+                        &:nth-child(2){
+                            color: $color-33;
+                            margin: 8px 0 20px;
+                            @include layoutSm{
+                                font-size: 14px;
+                            }
+                        }
+                        &:nth-child(3){
+                            font-size: $font-xl;
+                            color: $black;
+                            font-weight: $fontB;
+                            @include layoutSm{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* benefit */
+.benefit {
+    padding: 100px 0;
+    h3 {
+        font-size: $font-xxl;
+        font-weight: $fontB;
+        line-height: 1.7;
+        padding-bottom:45px;
+        @include tablet{
+            text-align: center;
+        }
+    }
+    li {
+        a {
+            display: block;
+            transition: all .25s;
+        }
+        figure {
+            img {
+                border-radius: 10px;
+                width: 100%;
+            }
+            figcaption {
+                font-size: $font-lg;
+                font-weight: $fontB;
+                margin-top: 25px;
+                color: $black;
+                @include layoutMd{
+                    font-size: 20px;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+            }
+            @include tablet{
+                margin-bottom: 50px;
+            }
+        }
+        &:hover {
+            a {
+                transform: translateY(-15px);
+            }
+        }
+    }
+}
+
+/* new item */
+.newItem {
+    background-color: $color-f1;
+    padding: 66px 0;
+    .container-lg {
+        > h3 {
+            font-size: $font-xxl;
+            font-weight: $fontB;
+            line-height: 1.7;
+            @include layoutLg{
+                @include txtAlign;
+            }
+        }
+        > p{
+            font-size: $font-lg;
+            color: $color-55;
+            padding-bottom: 45px;
+            @include layoutLg{
+                @include txtAlign;
+            }
+        }
+        .product {
+            figure {
+                background-color: $white;
+                padding: 20px 0;
+                @include txtAlign;
+                @include layoutLg{
+                    margin-bottom: 20px;
+                }
+                @include layoutSm{
+                    @include layout($alignItem: center, $spaceBetween: flex-start)
+                }
+                > img {
+                    width: 80%;
+                    @include layoutSm{
+                        width: 40%
+                    }
+                }
+                figcaption {
+                    padding: 20px 20px 0;
+                    @include txtAlign($align:left);
+                    @include layoutLg{
+                        @include txtAlign;
+                    }
+                    @include layoutSm{
+                        padding: 0 0 0 20px;
+                        @include txtAlign($align: left)
+                    }
+                    dt {
+                        font-size: $font-xl;
+                        font-weight: $fontB;
+                        color: $black;
+                        @include layoutSm{
+                            font-size: 20px;
+                        }
+                    }
+                    dd {
+                        &:nth-child(2){
+                            color: $color-33;
+                            margin: 8px 0 20px;
+                            @include layoutSm{
+                                font-size: 14px;
+                            }
+                        }
+                        &:nth-child(3){
+                            font-size: $font-xl;
+                            color: $black;
+                            font-weight: $fontB;
+                            @include layoutSm{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

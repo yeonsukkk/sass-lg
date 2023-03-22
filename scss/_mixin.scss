@@ -1,0 +1,35 @@
+@mixin layout ($spaceBetween:space-between, $alignItem: center){
+    display: flex;
+    justify-content: $spaceBetween;
+    align-items: $alignItem;
+    @content;
+}
+
+@mixin posAbs($top: auto, $left: auto, $right: auto, $bottom: auto){
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+}
+
+@mixin txtAlign($align: center){
+    text-align: $align;
+}
+
+@mixin layoutSm{
+    @media (max-width: #{$breakpoint-sm}){@content;}
+}
+@mixin layoutMd{
+    @media (max-width: #{$breakpoint-md}){@content;}
+}
+@mixin layoutLg{
+    @media (max-width: #{$breakpoint-lg}){@content;}
+}
+@mixin mobile{
+    @media (max-width: #{$breakpoint-mobile}) {@content;}
+}
+
+@mixin tablet{
+    @media (max-width: #{$breakpoint-tablet}){@content;}
+}

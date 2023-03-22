@@ -1,0 +1,104 @@
+/* header.css */
+header {
+    padding: 15px 0;
+}
+
+header .top .util > ul {
+    display: flex; 
+    justify-content: flex-end;
+}
+header .top .util > ul > li {
+    margin: 0 10px; 
+    position: relative;
+}
+header .top .util > ul > li > a {
+    font-size: 0; 
+    line-height: 0;
+    display: block; 
+    width: 24px; 
+    height: 0;
+    padding-top: 100%; 
+    background: center center no-repeat; 
+    background-size: 100%;
+}
+header .top .util > ul > li:nth-child(1) > a {
+    background-image: url('../img/icon_search.svg')
+}
+header .top .util > ul > li:nth-child(2) > a {
+    background-image: url('../img/icon_person.svg')
+}
+header .top .util > ul > li:nth-child(3) > a {
+    background-image: url('../img/icon_cart.svg')
+}
+header .top .util ul div {
+    display :none; 
+    position: absolute; 
+    top: 100%; 
+    left: 50%; 
+    margin-left: -60px; 
+    width: 120px; 
+    padding-top: 8px;
+    z-index: 100;
+}
+header .top .util ul ul {
+    border-radius: 10px; 
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+    padding: 10px 0;
+    background-color: #fff; 
+}
+header .top .util ul div a {
+    display: block; 
+    text-align: center; 
+    padding: 10px; 
+    font-size: 14px; 
+    color: #333; 
+    transition: all .25s;
+}
+
+header .top .util > ul > li:hover div {
+    display: block;
+}
+header .top .util > ul > li li a:hover {
+    background-color: #eee;
+}
+
+
+/* header .btm */
+header .btm ul {
+    display: flex;
+}
+header .btm ul li {
+    margin: 0 10px;
+}
+header .btm ul li a {
+    display: block;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+header .btm ul li a:before {
+    content:"";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    overflow: hidden;
+    transition: all .25s;
+}
+header .btm ul li:hover a:before {
+    width: 100%;
+}
+header .btm ul li.point a:after {
+    content:"";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: -4px;
+}

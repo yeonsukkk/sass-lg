@@ -1,0 +1,110 @@
+// common.scss
+
+@use './var.scss' as *;
+@import './mixin.scss';
+
+header {
+    padding: 15px 0;
+    .top { // .top
+        .util {
+            > ul {
+                @include layout($spaceBetween: flex-end);
+                > li {
+                    margin: 0 10px; 
+                    position: relative;
+                    > a {
+                        font-size: 0; 
+                        line-height: 0;
+                        display: block; 
+                        width: 24px; 
+                        height: 0;
+                        padding-top: $fullWid; 
+                        background: {
+                            repeat: no-repeat;
+                            position: center center;
+                            size: $fullWid;
+                        }
+                    }
+                    @for $i from 1 through 3 {
+                        &:nth-child(#{$i}) > a {
+                            background-image: url('../img/icon_util#{$i}.svg');
+                        };
+                    };
+                    div { // .util subMenu
+                        display :none; 
+                        @include posAbs($top: 100%, $left: 50%);
+                        margin-left: -60px; 
+                        width: 120px; 
+                        padding-top: 8px;
+                        z-index: 100;
+                        ul {
+                            border-radius: 10px; 
+                            box-shadow: 0 3px 10px rgba(0,0,0,0.1); 
+                            padding: 10px 0;
+                            background-color: $white; 
+                            li {
+                                a {
+                                    @include txtAlign; 
+                                    display: block; 
+                                    padding: 10px; 
+                                    font-size: $font-sm; 
+                                    color: $color-33; 
+                                    transition: all .25s;
+                                    &:hover {
+                                        background-color: #eee;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        div {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .btm { // .btm
+        ul {
+            @include layout($spaceBetween: flex-start);   
+            > li {
+                margin: 0 10px;
+                > a {
+                    display: block;
+                    color: $color-33;
+                    font-weight: $fontB;
+                    position: relative;
+                    &:before {
+                        content:"";
+                        display: block;
+                        width: 0;
+                        height: 2px;
+                        background-color: $color-33;
+                        @include posAbs($bottom: -1px, $left: 0);
+                        overflow: hidden;
+                        transition: all .25s;
+                    }
+                }
+                &.point {
+                    a:after {
+                        content:"";
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 100%;
+                        background-color: red;
+                        @include posAbs($top: calc(var(--bs-navbar-nav-link-padding-x) - 3px), $right: 0);
+                    }
+                }
+                &:hover {
+                    a:before {
+                        width: $fullWid;
+                    }
+                }
+            } 
+        }
+    }
+}

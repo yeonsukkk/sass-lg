@@ -1,0 +1,185 @@
+@import url('./common.css'); /* common */
+@import url('./header.css'); /* header */
+@import url('./footer.css'); /* footer */
+
+/* contents */
+
+/* main visual */
+main .mainVisual {
+    padding: 0; 
+    border-radius: 100px 0 100px 0; 
+    overflow: hidden;
+}
+main .mainVisual .carousel-control-next-icon, main .mainVisual .carousel-control-prev-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* quick menu */
+main .quick {
+    padding: 50px 0;
+}
+main .quick li a {
+    display: block;
+    padding: 100px 0 10px;
+    background: no-repeat center top 10px;
+    background-size: auto 50%;
+    transition: all .25s;
+}
+main .quick li:nth-child(1) a {
+    background-image: url('../img/icon_gram.svg');
+}
+main .quick li:nth-child(2) a {
+    background-image: url('../img/icon_vr.svg');
+}
+main .quick li:nth-child(3) a {
+    background-image: url('../img/icon_rental.svg');
+}
+main .quick li:nth-child(4) a {
+    background-image: url('../img/icon_filter.svg');
+}
+main .quick li:nth-child(5) a {
+    background-image: url('../img/icon_liveshow.svg');
+}
+main .quick li:nth-child(6) a {
+    background-image: url('../img/icon_event.svg');
+}
+main .quick span {
+    display: block;
+    color: #222;
+    text-align: center;
+    line-height: 1.4;
+}
+main .quick li:hover a {
+    transform: translateY(-15px);
+}
+
+/* best item */
+main .bestItem {
+    background-color: #f1f1f1;
+    padding: 66px 0;
+}
+main .bestItem .container-lg > h3 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+main .bestItem .container-lg > p {
+    font-size: 18px;
+    color: #555;
+}
+
+main .bestItem .tab {
+    padding: 45px 0;
+    display: flex;
+}
+main .bestItem .tab li {
+    margin: 0 10px;
+}
+main .bestItem .tab li:first-child {
+    margin-left: 0;
+}
+main .bestItem .tab li a {
+    display: block;
+    padding: 0 20px;
+    color: #000;
+    line-height: 2.5;
+    border-radius: 20px;
+    background-color: #e1e1e1;
+}
+
+main .bestItem .tab li.active a {
+    color: #fff;
+    background-color: #555;
+}
+main .bestItem .product figure {
+    background-color: #fff;
+    padding: 20px 0;
+}
+main .bestItem .product figcaption {
+    padding: 20px 20px 0;
+}
+main .bestItem .product figcaption dt {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+main .bestItem .product figcaption dd:nth-child(2) {
+    color: #333;
+    margin: 8px 0 20px;
+}
+main .bestItem .product figcaption dd:nth-child(3) {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
+
+/* benefit */
+main .benefit  {
+    padding: 100px 0;
+}
+main .benefit h3 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.7;
+    padding-bottom:45px;
+}
+main .benefit li a {
+    display: block;
+    transition: all .25s;
+}
+main .benefit figure img {
+    border-radius: 10px;
+}
+main .benefit figcaption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #000;
+}
+main .benefit li:hover a {
+    transform: translateY(-15px);
+}
+
+/* new item */
+main .newItem {
+    background-color: #f1f1f1;
+    padding: 66px 0;
+}
+main .newItem .container-lg > h3 {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.7;
+}
+main .newItem .container-lg > p {
+    font-size: 18px;
+    color: #555;
+    padding-bottom: 45px;
+}
+
+main .newItem .product figure {
+    background-color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+main .newItem .product figure img {
+    width: 80%;
+}
+main .newItem .product figcaption {
+    padding: 20px 20px 0;
+    text-align: left;
+}
+main .newItem .product figcaption dt {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+main .newItem .product figcaption dd:nth-child(2) {
+    color: #333;
+    margin: 8px 0 20px;
+}
+main .newItem .product figcaption dd:nth-child(3) {
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+}
