@@ -12,7 +12,7 @@ LG전자 제품 안내 페이지<br />
 <br />
 <br />
 
-<img src="https://ys-lg.s3.ap-northeast-2.amazonaws.com/git/home.png" alt="홈" width="300" style="vertical-align: top" /> <img src="https://ys-lg.s3.ap-northeast-2.amazonaws.com/git/home2.png" alt="홈" width="150" style="vertical-align: top" />
+<img src="https://ys-lg.s3.ap-northeast-2.amazonaws.com/git/home2.png" alt="홈" width="150" style="vertical-align: top" /> <img src="https://ys-lg.s3.ap-northeast-2.amazonaws.com/git/home.png" alt="홈" width="300" style="vertical-align: top" /> 
 <br />
 <br />
 
